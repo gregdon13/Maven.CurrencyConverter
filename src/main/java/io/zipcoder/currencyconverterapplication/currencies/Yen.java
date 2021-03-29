@@ -14,4 +14,9 @@ public class Yen implements ConvertableCurrency {
     public CurrencyType getType() {
         return yen;
     }
+
+    @Override
+    public Double convert(CurrencyType currencyType) {
+        return currencyType.getRate() / yen.getRate();
+    }
 }

@@ -14,4 +14,9 @@ public class Franc implements ConvertableCurrency {
     public CurrencyType getType() {
         return franc;
     }
+
+    @Override
+    public Double convert(CurrencyType currencyType) {
+        return currencyType.getRate() / franc.getRate();
+    }
 }

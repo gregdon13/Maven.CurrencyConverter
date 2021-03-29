@@ -14,4 +14,9 @@ public class UniversalCurrency implements ConvertableCurrency {
     public CurrencyType getType() {
         return universalCurrency;
     }
+
+    @Override
+    public Double convert(CurrencyType currencyType) {
+        return currencyType.getRate() / universalCurrency.getRate();
+    }
 }

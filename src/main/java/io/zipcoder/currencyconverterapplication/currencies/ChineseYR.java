@@ -15,4 +15,9 @@ public class ChineseYR implements ConvertableCurrency {
     public CurrencyType getType() {
         return chineseYR;
     }
+
+    @Override
+    public Double convert(CurrencyType currencyType) {
+        return currencyType.getRate() / chineseYR.getRate();
+    }
 }

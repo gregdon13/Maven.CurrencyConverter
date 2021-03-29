@@ -14,4 +14,9 @@ public class AustralianDollar implements ConvertableCurrency {
     public CurrencyType getType() {
         return australianDollar;
     }
+
+    @Override
+    public Double convert(CurrencyType currencyType) {
+        return currencyType.getRate() / australianDollar.getRate();
+    }
 }

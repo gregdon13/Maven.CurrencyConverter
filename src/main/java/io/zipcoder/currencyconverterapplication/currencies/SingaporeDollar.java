@@ -14,4 +14,9 @@ public class SingaporeDollar implements ConvertableCurrency {
     public CurrencyType getType() {
         return singaporeDollar;
     }
+
+    @Override
+    public Double convert(CurrencyType currencyType) {
+        return currencyType.getRate() / singaporeDollar.getRate();
+    }
 }

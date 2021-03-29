@@ -14,4 +14,9 @@ public class Pound implements ConvertableCurrency {
     public CurrencyType getType() {
         return pound;
     }
+
+    @Override
+    public Double convert(CurrencyType currencyType) {
+        return currencyType.getRate() / pound.getRate();
+    }
 }

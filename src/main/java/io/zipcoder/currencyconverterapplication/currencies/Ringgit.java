@@ -14,4 +14,9 @@ public class Ringgit implements ConvertableCurrency {
     public CurrencyType getType() {
         return ringgit;
     }
+
+    @Override
+    public Double convert(CurrencyType currencyType) {
+        return currencyType.getRate() / ringgit.getRate();
+    }
 }

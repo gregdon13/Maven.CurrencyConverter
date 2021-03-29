@@ -14,4 +14,9 @@ public class Rupee implements ConvertableCurrency {
     public CurrencyType getType() {
         return rupee;
     }
+
+    @Override
+    public Double convert(CurrencyType currencyType) {
+        return currencyType.getRate() / rupee.getRate();
+    }
 }

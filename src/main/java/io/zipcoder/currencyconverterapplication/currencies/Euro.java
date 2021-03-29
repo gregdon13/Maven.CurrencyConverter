@@ -14,4 +14,9 @@ public class Euro implements ConvertableCurrency {
     public CurrencyType getType() {
         return euro;
     }
+
+    @Override
+    public Double convert(CurrencyType currencyType) {
+        return currencyType.getRate() / euro.getRate();
+    }
 }

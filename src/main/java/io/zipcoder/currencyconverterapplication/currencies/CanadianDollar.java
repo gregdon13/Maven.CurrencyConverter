@@ -14,4 +14,9 @@ public class CanadianDollar implements ConvertableCurrency {
     public CurrencyType getType() {
         return canadianDollar;
     }
+
+    @Override
+    public Double convert(CurrencyType currencyType) {
+        return currencyType.getRate() / canadianDollar.getRate();
+    }
 }
